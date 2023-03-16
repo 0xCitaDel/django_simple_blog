@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul class="container list-group">
+{% for post in list_articles %}
+    <li class="list-group-item">
+        <b>{{ post.create_date }} - {{ post.author }}</b>
+        <span class="mr-3">{{ post.name|truncatechars:33 }}</span>
+        <span class="text-secondary-emphasis">{{ post.text|truncatewords:2 }}</span>
+        <span class="float-end"><a href="post/{{post.id}}"> Перейти к статье </a></span>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

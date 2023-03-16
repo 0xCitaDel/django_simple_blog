@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <b>{{ single_article.create_date }}</b>
+        <br>
+        <span>{{ single_article.name }}</span>
+        <br>
+        <span class="text-secondary-emphasis">{{ single_article.text }}</span>
+    </div>
+{% endblock %}
